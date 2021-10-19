@@ -1,0 +1,12 @@
+{
+    "author": "First Last",
+    "author_slug": "{{ cookiecutter.author | slugify(separator='_') }}",
+    "email": "{{ cookiecutter.author.lower().split()[0] }}.{{ cookiecutter.author.lower().split()[-1] }}@nrel.gov",
+    "ingest": "Ingest Name",
+    "ingest_slug": "{{ cookiecutter.ingest | slugify(separator='_') }}",
+    "ingest_description": "description",
+    "location": "Location",
+    "location_slug": "{{ cookiecutter.location | slugify(separator='_') }}",
+    "use_custom_filehandler": "y",
+    "use_custom_qc": "n"
+}
