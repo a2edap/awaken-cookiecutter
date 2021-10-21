@@ -1,19 +1,32 @@
-# Awaken Ingest Template
+# AWAKEN Ingest Template
 
-This cookiecutter template helps stand up a new ingest module within the https://github.com/a2edap/awaken-ingest repository.
+This cookiecutter template is intended to be used in conjunction with the 
+[ingest-awaken](https://github.com/a2edap/ingest-awaken) repository.
 
-## Getting Started
+To use it, make sure you have `cookiecutter` installed
+```
+pip install cookiecutter
+```
+
+Then run the following command from the top-level directory of the ingest awaken
+repository:
+```
+cookiecutter https://github.com/a2edap/awaken-cookiecutter -o ingest/
+```
+
+This will bring up a commandline interface which will go through some options. Consult
+the documentation below for more information regarding these prompts.
 
 
-- Fork https://github.com/a2edap/awaken-ingest, if you haven't already done so, and navigate to that directory in the terminal
+| Field                    | Default               | Description                                                                                                                             |
+|--------------------------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| `author`                 | `First Last`          | Main author of this ingest.                                                                                                             |
+| `email`                  |                       | Contact email of the author.                                                                                                            |
+| `ingest`                 | `Ingest Name`         | Verbose name of the ingest. Used in the README.md                                                                                       |
+| `ingest_slug`            | `ingest_name`         | Name used for the ingest module. Lowercase alphanumeric and '_' characters allowed.                                                     |
+| `description`            | `description`         | A brief description of the ingest. Used in README.md                                                                                    |
+| `location`               | `Location`            | The verbose location                                                                                                                    |
+| `location_slug`          | `location`            | Location used to name files and attributes. Lowercase alphanumeric and '_' characters allowed.                                          |
+| `use_custom_filehandler` | `y`                   | Flag to generate a custom FileHandler template. Use this if data cannot be read in using the out-of-box FileHandlers provided by tsdat. |
+| `use_custom_qc`          | `n`                   | Flag to generate a custom QC template module. Use this if you want to apply custom quality checks or handlers.                          |
 
-- Pull the latest changes from the master branch of https://github.com/a2edap/awaken-ingest
-
-- Install `cookiecutter` if you haven't already done so: `pip install cookiecutter`
-
-- Run the `awaken-ingest` cookiecutter and follow the prompts for your settings:
-    ```
-    cookiecutter https://github.com/a2edap/a2e-cookiecutter --directory awaken-ingest -o pipelines
-    ```
-
-- Follow the instructions in the generated folder's `README.md` file for the next steps

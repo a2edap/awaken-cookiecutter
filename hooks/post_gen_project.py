@@ -14,8 +14,8 @@ def copy_file(filepath, target):
 
 if __name__ == "__main__":
 
-    if "{{ cookiecutter.use_custom_filehandler }}" != "y":
+    if "{{ cookiecutter.use_custom_filehandler }}" in ["n", "N", "no", "No"]:
         remove_file("pipeline/filehandler.py")
 
-    if "{{ cookiecutter.use_custom_qc }}" == "n":
+    if "{{ cookiecutter.use_custom_qc }}" in ["n", "N", "no", "No"]:
         remove_file("pipeline/qc.py")

@@ -3,6 +3,10 @@ from typing import Optional
 from tsdat import DSUtil
 from tsdat.qc import QualityChecker, QualityHandler
 
+# TODO – Developer: Add your custom quality checker / quality handler. Rename these to
+# indicate more clearly what they do. You will need to update the pipeline config file
+# with the new class name.
+
 
 class CustomQualityChecker(QualityChecker):
     def run(self, variable_name: str) -> Optional[np.ndarray]:

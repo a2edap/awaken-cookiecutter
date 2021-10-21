@@ -1,7 +1,7 @@
 import tsdat
 import xarray as xr
 
-
+# TODO – Developer: Write your FileHandler and add documentation
 class IngestFileHandler(tsdat.AbstractFileHandler):
     """--------------------------------------------------------------------------------
     Custom file handler for reading <some data type> files from a <instrument name>
@@ -22,5 +22,4 @@ class IngestFileHandler(tsdat.AbstractFileHandler):
         Returns:
             xr.Dataset: An xr.Dataset object
         ----------------------------------------------------------------------------"""
-        # TODO: Implement me
         return xr.Dataset()

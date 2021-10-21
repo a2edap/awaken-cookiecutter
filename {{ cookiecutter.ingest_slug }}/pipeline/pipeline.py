@@ -3,14 +3,14 @@ import xarray as xr
 import matplotlib.pyplot as plt
 
 from typing import Dict
-from utils import A2eIngestPipeline
+from utils import A2ePipeline
 
 
-class Pipeline(A2eIngestPipeline):
+class Pipeline(A2ePipeline):
     """--------------------------------------------------------------------------------
     {{ cookiecutter.ingest.upper() }} INGESTION PIPELINE
 
-    {{ cookiecutter.ingest_description }}
+    {{ cookiecutter.description }}
 
     --------------------------------------------------------------------------------"""
 

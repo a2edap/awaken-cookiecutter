@@ -1,6 +1,13 @@
+# TODO – Developer: Fill out this file. You can reference the official documentation at
+# https://github.com/tsdat/tsdat/blob/main/examples/templates/ingest_pipeline_template.yml
+# or open an existing example in this repository to see what you can do here. Note that
+# the A2e program uses slightly different metadata conventions than tsdat and a
+# reviewer can help you determine which metadata should be included here.
+
 pipeline:
   type: Ingest
 
+  # These parameters will be used to name files.
   location_id: "{{ cookiecutter.location_slug }}"
   dataset_name: "{{ cookiecutter.ingest_slug }}"
   # qualifier: ""
@@ -10,10 +17,10 @@ pipeline:
 dataset_definition:
   attributes:
     title: "{{ cookiecutter.ingest }}"
-    description: "{{ cookiecutter.ingest_description }}"
+    description: "{{ cookiecutter.description }}"
     conventions: MHKiT-Cloud Data Standards v. 1.0
     institution: Atmosphere to Electrons
-    code_url: https://github.com/a2edap/awaken-ingest
+    code_url: https://github.com/a2edap/ingest-awaken
 
   dimensions:
     time:
@@ -49,32 +56,38 @@ dataset_definition:
         long_name: Example Var  # Label used by Xarray and other libraries for plotting
         standard_name: ""       # Standard name from the CF Standard names table. 
                                 # Provide this if possible, otherwise remove it.
+        comment: ""             # User-friendly description of the property.
         units: km               # Units attribute from the CF Standard list of units. 
                                 # Always provide this, even for 'unitless' quantities –
                                 # set `units: "1"` for such quantities.
     
-    lat:
-      data: 0.0
-      dims: []
+    latitude:
+      data: 71.323
       type: float
       attrs:
-        long_name: Latitude
-        units: degree_N
-      
-    lon:
-      data: 0.0
-      dims: []
+        long_name: "North latitude"
+        standard_name: "latitude"
+        comment: "Recorded lattitude at the instrument location"
+        units: "degree_N"
+        valid_range: [-90.f, 90.f]
+
+    longitude:
+      data: -156.609
       type: float
       attrs:
-        long_name: Longitude
-        units: degree_E
+        long_name: "East longitude"
+        standard_name: "longitude"
+        comment: "Recorded longitude at the instrument location"
+        units: "degree_E"
+        valid_range: [-180.f, 180.f]
     
-    alt:
-      data: 0.0
-      dims: []
+    altitude:
+      data: 4000.0
       type: float
       attrs:
-        long_name: Altitude
+        long_name: "Altitude"
+        standard_name: "altitude"
+        comment: "Recorded altitude at the instrument location"
         units: m
     
 #-----------------------------------------------------------------
@@ -113,4 +126,12 @@ quality_management:
           meaning: "Value is equal to _FillValue or NaN"
     variables:
       - DATA_VARS
-    exclude: [lat, lon, alt]
+    exclude: [latitude, longitude, altitude]
+
+
+  # TODO – Maintainer: Add example QC Manager if user specifies they are using custom qc
+  manage_custom_qc:  # Rename this
+    checker:
+      classname: ingest.{{ cookiecutter.ingest_slug }}.pipeline.qc.CustomQualityChecker
+    handlers:
+      - classname: ingest.{{ cookiecutter.ingest_slug }}.pipeline.qc.CustomQualityHandler
