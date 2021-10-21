@@ -24,7 +24,7 @@ storage:
                                   # those matched files.
         classname: ingest.{{ cookiecutter.ingest_slug }}.pipeline.filehandler.CustomFileHandler
       
-      # TODO – Developer: Delete default comments in the file_handlers: input section
+      # TODO – Developer: Delete this if you don't want to use the CsvHandler
       # You can also use built-in tsdat FileHandlers, which support a number of custom
       # parameters: https://tsdat.rtfd.io/en/latest/autoapi/tsdat/io/filehandlers/
       # csv:
@@ -34,11 +34,16 @@ storage:
       #     read:
       #       read_csv:
       #         # Parameters here will be passed to pd.read_csv() as kwargs
-      #       to_xarray:
-      #         # Parameters here will be passed to pd.DataFrame.to_xarray() as kwargs
-    {% else %}csv:
+    {% else %}# TODO – Developer: Update the csv handler as needed
+      csv:
         file_pattern: '.*\.csv'                       # Matches files ending in '.csv'
         classname: tsdat.io.filehandlers.CsvHandler   # FileHandler module to use
+        # parameters:
+        #   read:
+        #     # You can add parameters that are passed to pandas.read_csv() as kwargs
+        #     read_csv:
+        #       sep: "\t"
+
     {% endif %}
     # The output section should not be modified unless there is a strong need. Please
     # contact the repository maintainers if you feel you need to write to a different

@@ -1,4 +1,4 @@
-# TODO – Developer: Fill out this file. You can reference the official documentation at
+# TODO – Developer: Fill out this file. You can find the official documentation at
 # https://github.com/tsdat/tsdat/blob/main/examples/templates/ingest_pipeline_template.yml
 # or open an existing example in this repository to see what you can do here. Note that
 # the A2e program uses slightly different metadata conventions than tsdat and a
@@ -127,11 +127,10 @@ quality_management:
     variables:
       - DATA_VARS
     exclude: [latitude, longitude, altitude]
-
-
-  # TODO – Maintainer: Add example QC Manager if user specifies they are using custom qc
+{% if cookiecutter.use_custom_qc == "yes" %}
+  # TODO – Developer: Update this as needed.
   manage_custom_qc:  # Rename this
     checker:
       classname: ingest.{{ cookiecutter.ingest_slug }}.pipeline.qc.CustomQualityChecker
     handlers:
-      - classname: ingest.{{ cookiecutter.ingest_slug }}.pipeline.qc.CustomQualityHandler
+      - classname: ingest.{{ cookiecutter.ingest_slug }}.pipeline.qc.CustomQualityHandler{% endif %}

@@ -6,6 +6,12 @@
     "description": "description",
     "location": "Location",
     "location_slug": "{{ cookiecutter.location | slugify(separator='_') }}",
-    "use_custom_filehandler": "y",
-    "use_custom_qc": "n"
+    "use_custom_filehandler": [
+        "yes",
+        "no"
+    ],
+    "use_custom_qc": [
+        "yes",
+        "no"
+    ]
 }

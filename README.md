@@ -18,15 +18,15 @@ This will bring up a commandline interface which will go through some options. C
 the documentation below for more information regarding these prompts.
 
 
-| Field                    | Default               | Description                                                                                                                             |
-|--------------------------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| `author`                 | `First Last`          | Main author of this ingest.                                                                                                             |
-| `email`                  |                       | Contact email of the author.                                                                                                            |
-| `ingest`                 | `Ingest Name`         | Verbose name of the ingest. Used in the README.md                                                                                       |
-| `ingest_slug`            | `ingest_name`         | Name used for the ingest module. Lowercase alphanumeric and '_' characters allowed.                                                     |
-| `description`            | `description`         | A brief description of the ingest. Used in README.md                                                                                    |
-| `location`               | `Location`            | The verbose location                                                                                                                    |
-| `location_slug`          | `location`            | Location used to name files and attributes. Lowercase alphanumeric and '_' characters allowed.                                          |
-| `use_custom_filehandler` | `y`                   | Flag to generate a custom FileHandler template. Use this if data cannot be read in using the out-of-box FileHandlers provided by tsdat. |
-| `use_custom_qc`          | `n`                   | Flag to generate a custom QC template module. Use this if you want to apply custom quality checks or handlers.                          |
+| Field                    | Default               | Description                                                                                                                         |
+|--------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| `author`                 | `First Last`          | Main author of this ingest.                                                                                                         |
+| `email`                  |                       | Contact email of the author.                                                                                                        |
+| `ingest`                 | `Ingest Name`         | Verbose name of the ingest. Used in the README.md                                                                                   |
+| `ingest_slug`            | `ingest_name`         | Name used for the ingest module. Lowercase alphanumeric and '_' characters allowed.                                                 |
+| `description`            | `description`         | A brief description of the ingest. Used in README.md                                                                                |
+| `location`               | `Location`            | The verbose location                                                                                                                |
+| `location_slug`          | `location`            | Location used to name files and attributes. Lowercase alphanumeric and '_' characters allowed.                                      |
+| `use_custom_filehandler` | `yes`                 | Flag to generate a custom FileHandler template. Use this if data cannot be read in using out-of-box FileHandlers provided by tsdat. |
+| `use_custom_qc`          | `yes`                 | Flag to generate a custom QC template module. Use this if you want to apply custom quality checks or handlers.                      |
 
