@@ -12,7 +12,7 @@ pipeline:
   dataset_name: "{{ cookiecutter.ingest_slug }}"
   # qualifier: ""
   # temporal: ""
-  data_level: "a0"
+  data_level: "a0"  # If applying QC this should be set to "b0"
 
 dataset_definition:
   attributes:
