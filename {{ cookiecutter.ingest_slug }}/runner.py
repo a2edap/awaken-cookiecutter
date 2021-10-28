@@ -1,6 +1,12 @@
-# This file is provided solely to run the ingest during development.
+from . import Pipeline
+from utils import expand, set_dev_env
 
-# TODO – Maintainer: Set this up to run on the example data
 
+# TODO – Developer: Update path to data and/or configuration files as needed.
 if __name__ == "__main__":
-    print("hello world")
+    set_dev_env()
+    pipeline = Pipeline(
+        expand("config/pipeline_config_{{ cookiecutter.location_slug }}.yml", __file__),
+        expand("config/storage_config.yml", __file__),
+    )
+    pipeline.run(expand("tests/data/input/data.txt"))
