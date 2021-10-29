@@ -10,6 +10,8 @@ The ingest takes the following layout:
 
 - `runner.py` –– Entry point to run the pipeline in local development mode.
 - `mapping.py` –– Defines a mapping of filepath pattern to ingest specification so that
+- `__init__.py` –– Declares this folder as a Python module and provides a number of
+methods / classes that upstream code can import.
 upstream code can easily launch this ingest on data with the right parameters.
 - `config/` –– Contains `yaml` configuration files for specifying metadata, quality
 checks and handling, variable retrieval specifications, and input/output types.
@@ -19,12 +21,6 @@ support any other custom functionality needed.
 - `tests/` –– Contains tests that should be applied to this ingest in order to ensure
 it functions as intended. Tests in here will be run any time a change is made to the
 `a2edap/ingest-awaken` master branch, so the test(s) should be lightweight if possible.
-
-Other files:
-- `__init__.py` –– Declares this folder as a Python module and provides a number of
-methods / classes that upstream code can import.
-- `requirements.txt` –– Contains any packages not included in the top-level
-requirements.txt file that are necessary for this ingest to run.
 
 
 ## Getting started
