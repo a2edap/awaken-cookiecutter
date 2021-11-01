@@ -4,7 +4,7 @@ from typing import AnyStr, Dict
 from utils import IngestSpec, expand
 from . import Pipeline
 
-# TODO – Maintainer: Consider using `parse` here instead. It seems more user-friendly
+
 # TODO – Developer: Update the regex patterns to match files that should trigger your
 # ingest pipeline. See http://www.pyregex.com for help setting up a regex pattern. Note
 # that the full filepath will be passed to the compiled regex pattern, so you can
