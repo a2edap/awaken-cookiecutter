@@ -13,7 +13,7 @@ def test_pipeline_at_sgp():
         expand("config/pipeline_config_{{ cookiecutter.location_slug }}.yml", parent),
         expand("config/storage_config.yml", parent),
     )
-    output = pipeline.run(expand("tests/data/input/data.txt"))
-    expected = xr.open_dataset(expand("tests/data/expected/data.txt"))
+    output = pipeline.run(expand("tests/data/input/data.txt", parent))
+    expected = xr.open_dataset(expand("tests/data/expected/data.txt", parent))
 
     assert output.equals(expected)
