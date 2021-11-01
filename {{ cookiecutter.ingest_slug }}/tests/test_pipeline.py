@@ -7,7 +7,7 @@ parent = os.path.dirname(__file__)
 
 
 # TODO – Developer: Update paths to your input files here. Please add tests if needed.
-def test_pipeline_at_sgp():
+def test_pipeline_at_{{ cookiecutter.location_slug }}():
     set_dev_env()
     pipeline = Pipeline(
         expand("config/pipeline_config_{{ cookiecutter.location_slug }}.yml", parent),
