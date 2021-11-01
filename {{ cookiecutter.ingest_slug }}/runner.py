@@ -9,4 +9,6 @@ if __name__ == "__main__":
         expand("config/pipeline_config_{{ cookiecutter.location_slug }}.yml", __file__),
         expand("config/storage_config.yml", __file__),
     )
-    pipeline.run(expand("tests/data/input/data.txt", __file__))
+    pipeline.run(
+        expand("tests/data/input/{{ cookiecutter.location_slug }}/data.txt", __file__)
+    )
