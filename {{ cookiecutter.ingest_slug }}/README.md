@@ -8,8 +8,10 @@ Writen by [{{ cookiecutter.author }}](mailto:{{ cookiecutter.email }})
 
 The ingest takes the following layout:
 
-- `runner.py` –– Entry point to run the pipeline in local development mode.
+- `runner.py` –– CLI to run this pipeline on a set of input files.
 - `mapping.py` –– Defines a mapping of filepath pattern to ingest specification so that
+higher level processes know which ingest and configurations to use given a set of input
+files.
 - `__init__.py` –– Declares this folder as a Python module and provides a number of
 methods / classes that upstream code can import.
 upstream code can easily launch this ingest on data with the right parameters.
