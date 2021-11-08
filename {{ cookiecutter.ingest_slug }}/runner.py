@@ -1,4 +1,4 @@
-from . import Pipeline
+from ingest.{{ cookiecutter.ingest_slug }} import Pipeline
 from utils import expand, set_dev_env
 
 
