@@ -6,6 +6,10 @@ from typing import Dict
 from utils import A2ePipeline
 
 
+# TODO – Developer: Use hooks to add custom functionality to the pipeline including
+# plots, as applicable. Remove any unused code.
+
+
 class Pipeline(A2ePipeline):
     """--------------------------------------------------------------------------------
     {{ cookiecutter.ingest.upper() }} INGESTION PIPELINE
@@ -29,5 +33,5 @@ class Pipeline(A2ePipeline):
 
     def hook_generate_and_persist_plots(self, dataset: xr.Dataset):
         style_file = os.path.join(os.path.dirname(__file__), "styling.mplstyle")
-        with plt.style.use(style_file):
+        with plt.style.context(style_file):
             pass

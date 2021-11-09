@@ -13,7 +13,7 @@ from . import Pipeline
 # match the directory structure in addition to (or instead of) the file basename.
 mapping: Dict["AnyStr@compile", IngestSpec] = {
     # Mapping for Raw Data -> Ingest
-    re.compile("YOUR-REGEX-HERE"): IngestSpec(
+    re.compile(r"YOUR-REGEX-HERE"): IngestSpec(
         pipeline=Pipeline,
         pipeline_config=expand(
             "config/pipeline_config_{{ cookiecutter.location_slug }}.yml", __file__
@@ -22,7 +22,7 @@ mapping: Dict["AnyStr@compile", IngestSpec] = {
         name="awaken_buoy_ingest",
     ),
     # Mapping for Processed Data -> Ingest (so we can reprocess plots)
-    re.compile("YOUR-REGEX-HERE"): IngestSpec(
+    re.compile(r"YOUR-REGEX-HERE"): IngestSpec(
         pipeline=Pipeline,
         pipeline_config=expand(
             "config/pipeline_config_{{ cookiecutter.location_slug }}.yml", __file__

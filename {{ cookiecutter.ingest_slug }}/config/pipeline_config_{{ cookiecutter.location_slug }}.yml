@@ -12,7 +12,7 @@ pipeline:
   dataset_name: "{{ cookiecutter.ingest_slug }}"
   # qualifier: ""
   # temporal: ""
-  data_level: "a0"  # If applying QC this should be set to "b0"
+  data_level: "b0"  # If not applying QC this should be set to "a0"
 
 dataset_definition:
   attributes:
@@ -21,6 +21,7 @@ dataset_definition:
     conventions: MHKiT-Cloud Data Standards v. 1.0
     institution: Atmosphere to Electrons
     code_url: https://github.com/a2edap/ingest-awaken
+    location_meaning: "{{ cookiecutter.location }}"
 
   dimensions:
     time:

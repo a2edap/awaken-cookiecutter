@@ -1,7 +1,7 @@
 import numpy as np
 from typing import Optional
-from tsdat import DSUtil
-from tsdat.qc import QualityChecker, QualityHandler
+from tsdat import DSUtil, QualityChecker, QualityHandler
+
 
 # TODO – Developer: Add your custom quality checker / quality handler. Rename these to
 # indicate more clearly what they do. You will need to update the pipeline config file

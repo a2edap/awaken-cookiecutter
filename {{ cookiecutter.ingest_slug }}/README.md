@@ -8,7 +8,7 @@ Writen by [{{ cookiecutter.author }}](mailto:{{ cookiecutter.email }})
 
 The ingest takes the following layout:
 
-- `runner.py` –– CLI to run this pipeline on a set of input files.
+- `runner.py` –– development entry point to run this pipeline on a set of input files.
 - `mapping.py` –– Defines a mapping of filepath pattern to ingest specification so that
 higher level processes know which ingest and configurations to use given a set of input
 files.
