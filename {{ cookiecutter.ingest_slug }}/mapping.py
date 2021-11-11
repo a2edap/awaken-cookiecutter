@@ -8,8 +8,8 @@ from . import Pipeline
 # TODO – Developer: Update the regex patterns to match files that should trigger your
 # ingest pipeline.
 
-# See http://www.pyregex.com for information on setting up a regex pattern. Note that
-# the full filepath will be passed to the compiled regex pattern, so you can optionally
+# See https://regex101.com for information on setting up a regex pattern. Note that the
+# full filepath will be passed to the compiled regex pattern, so you can optionally
 # match the directory structure in addition to (or instead of) the file basename.
 mapping: Dict["AnyStr@compile", IngestSpec] = {
     # Mapping for Raw Data -> Ingest
