@@ -15,5 +15,4 @@ def test_pipeline_at_{{ cookiecutter.location_slug }}():
     )
     output = pipeline.run(expand("tests/data/input/{{ cookiecutter.location_slug }}/data.txt", parent))
     expected = xr.open_dataset(expand("tests/data/expected/{{ cookiecutter.location_slug }}/data.txt", parent))
-
-    assert output.equals(expected)
+    xr.testing.assert_allclose(output, expected)
