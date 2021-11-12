@@ -51,7 +51,8 @@ running/debugging the `runner.py` script at the same level as this `README.md` f
 formatted by `black`, there should be no `flake8` warnings (Use "`# noqa`" to disable
 a specific line, if need be), and this `README.md` file should be updated to include a
 description of your ingest pipeline for end-users, project maintainers, and curious
-onlookers who may not be familiar with your work. If this has all been completed, then
+onlookers who may not be familiar with your work. Additionally, please remove this
+section ("Getting Started") of the README.md file. If this has all been completed, then
 sync your local changes with your remote fork of `a2edap/ingest-awaken`, push your
 local commits to your repository on github, and submit a pull request with the `main`
 branch of `a2edap/ingest-awaken` so that your changes can be reviewed and merged into
