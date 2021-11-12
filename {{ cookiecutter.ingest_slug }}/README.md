@@ -2,6 +2,8 @@
 
 {{ cookiecutter.description}}
 
+<!-- # TODO – Developer: Add more to the ingest description here -->
+
 Writen by [{{ cookiecutter.author }}](mailto:{{ cookiecutter.email }})
 
 ## Ingest Organization
@@ -47,9 +49,10 @@ running/debugging the `runner.py` script at the same level as this `README.md` f
 
 5. When you have finished the ingest script your tests should pass, the code should be
 formatted by `black`, there should be no `flake8` warnings (Use "`# noqa`" to disable
-a specific line, if need be), and this `README.md` file should be totally re-written to
-describe your ingest pipeline to end-users, project maintainers, and curious onlookers
-who may not be familiar with your work. If this has all been completed, then sync your
-local changes with your remote fork of `a2edap/ingest-awaken` and submit a pull request
-with the `master` branch so that your changes can be reviewed and merged into
-production.   
+a specific line, if need be), and this `README.md` file should be updated to include a
+description of your ingest pipeline for end-users, project maintainers, and curious
+onlookers who may not be familiar with your work. If this has all been completed, then
+sync your local changes with your remote fork of `a2edap/ingest-awaken`, push your
+local commits to your repository on github, and submit a pull request with the `main`
+branch of `a2edap/ingest-awaken` so that your changes can be reviewed and merged into
+production.

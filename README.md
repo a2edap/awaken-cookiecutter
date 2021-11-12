@@ -22,11 +22,11 @@ the documentation below for more information regarding these prompts.
 |--------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | `author`                 | `First Last`          | Main author of this ingest.                                                                                                         |
 | `email`                  |                       | Contact email of the author.                                                                                                        |
-| `ingest`                 | `Ingest Name`         | Verbose name of the ingest. Used in the README.md                                                                                   |
-| `ingest_slug`            | `ingest_name`         | Name used for the ingest module. Lowercase alphanumeric and '_' characters allowed.                                                 |
-| `description`            | `description`         | A brief description of the ingest. Used in README.md                                                                                |
-| `location`               | `Location`            | The verbose location                                                                                                                |
+| `location`               | `Location`            | The name of the location where the instrument or ingest is located.                                                                 |
 | `location_slug`          | `location`            | Location used to name files and attributes. Lowercase alphanumeric and '_' characters allowed.                                      |
+| `ingest`                 | `Ingest Name`         | Verbose name of the ingest. Used in the README.md                                                                                   |
+| `ingest_slug`            | `ingest_name`         | Name used for the ingest module. Should take the format: `type_make_model_loc` (e.g., `lidar_halo_xrp_nwtc`)                        |
+| `description`            | `description`         | A brief description of the ingest. Used in README.md                                                                                |
 | `use_custom_filehandler` | `yes`                 | Flag to generate a custom FileHandler template. Use this if data cannot be read in using out-of-box FileHandlers provided by tsdat. |
 | `use_custom_qc`          | `yes`                 | Flag to generate a custom QC template module. Use this if you want to apply custom quality checks or handlers.                      |
 

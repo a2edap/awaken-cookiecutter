@@ -1,11 +1,11 @@
 {
     "author": "First Last",
     "email": "",
-    "ingest": "Ingest Name",
-    "ingest_slug": "{{ cookiecutter.ingest | slugify(separator='_') }}",
-    "description": "description",
     "location": "Location",
     "location_slug": "{{ cookiecutter.location | slugify(separator='_') }}",
+    "ingest": "Ingest Name",
+    "ingest_slug": "{{ cookiecutter.ingest | slugify(separator='_') }}_{{ cookiecutter.location_slug }}",
+    "description": "description",
     "use_custom_filehandler": [
         "yes",
         "no"
