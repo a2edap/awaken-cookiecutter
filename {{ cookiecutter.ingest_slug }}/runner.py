@@ -10,5 +10,5 @@ if __name__ == "__main__":
         expand("config/storage_config.yml", __file__),
     )
     pipeline.run(
-        expand("tests/data/input/{{ cookiecutter.location_slug }}/data.txt", __file__)
+        expand("tests/data/input/data.csv", __file__)
     )

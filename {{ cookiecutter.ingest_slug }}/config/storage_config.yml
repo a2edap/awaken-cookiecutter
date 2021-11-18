@@ -38,11 +38,12 @@ storage:
       csv:
         file_pattern: '.*\.csv'                       # Matches files ending in '.csv'
         classname: tsdat.io.filehandlers.CsvHandler   # FileHandler module to use
-        # parameters:
-        #   read:
-        #     # You can add parameters that are passed to pandas.read_csv() as kwargs
-        #     read_csv:
-        #       sep: "\t"
+        parameters:     # Parameters to pass to CsvHandler. Comment out if not using.
+          read:
+            # You can add parameters that are passed to pandas.read_csv() as kwargs:
+            read_csv:
+              index_col: False      # Treat the first column (time) as a data variable
+              header: 2             # Where to look for the header (header line number - 1) 
 
     {% endif %}
     # The output section should not be modified unless there is a strong need. Please
