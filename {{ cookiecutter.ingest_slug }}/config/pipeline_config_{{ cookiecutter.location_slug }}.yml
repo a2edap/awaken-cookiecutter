@@ -55,10 +55,10 @@ dataset_definition:
       type: float         # The data type, typically one of: `float`, `long`, `int`
       attrs:
         long_name: Example Var  # Label used by Xarray and other libraries for plotting
-        standard_name: ""       # Standard name from the CF Standard names table. 
+        # standard_name: ""     # Standard name from the CF Standard names table. 
                                 # Provide this if possible, otherwise remove it.
         comment: ""             # User-friendly description of the property.
-        units: km               # Units attribute from the CF Standard list of units. 
+        units: m                # Units attribute from the CF Standard list of units. 
                                 # Always provide this, even for 'unitless' quantities –
                                 # set `units: "1"` for such quantities.
     
